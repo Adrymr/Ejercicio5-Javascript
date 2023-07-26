@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Clientes y Automóviles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1>Taller John Doe & Doe 🚗🛠️🧰 </h1>
+
+        <form id="clienteForm">
+        <h2>Registrar Cliente 👤 </h2>
+
+            <label for="nombre">Nombre del responsable:</label>
+            <input type="text" id="nombre" required>
+
+            <h2>Registrar Automóvil 🚗</h2>
+
+            <label for="marca">Auto:</label>
+            <input type="text" id="marca" required>
+
+            <label for="matricula">Matrícula:</label>
+            <input type="text" id="matricula" required>
+
+            <label for="reparacion">Tipo de Mantenimiento:</label>
+            <select id="reparacion" required>
+                <option value="correctivo">Mantenimiento Correctivo</option>
+                <option value="preventivo">Mantenimiento Preventivo</option>
+            </select>
+
+            <button type="button" onclick="registrarCliente()">Registrar Cliente</button>
+        </form>
+
+        <div id="tablaRegistros">
+            <h2>Registros Realizados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Auto</th>
+                        <th>Matricula</th>
+                        <th>Tipo de Mantenimiento</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="./js/scripts.js"></script>
+    <script src="https://kit.fontawesome.com/f698d437a0.js" crossorigin="anonymous"></script>
+</body>
+</html>
